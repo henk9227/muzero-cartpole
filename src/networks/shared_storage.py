@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from src.networks.network import BaseNetwork, UniformNetwork, AbstractNetwork
+from networks.network import BaseNetwork, UniformNetwork, AbstractNetwork
 
 
 class SharedStorage(object):
@@ -21,3 +21,25 @@ class SharedStorage(object):
 
     def save_network(self, step: int, network: BaseNetwork):
         self._networks[step] = network
+    
+    def save_network_dir(self, step: int):
+        self.current_network.representation_network.save('./model/trainstep_{}/representation'.format(step))
+        self.current_network.value_network.save('./model/trainstep_{}/value'.format(step))
+        self.current_network.policy_network.save('./model/trainstep_{}/policy'.format(step))
+        self.current_network.dynamic_network.save('./model/trainstep_{}/dynamic'.format(step))
+        self.current_network.reward_network.save('./model/trainstep_{}/reward'.format(step))
+
+        self.current_network.initial_model.save('./model/trainstep_{}/initial'.format(step))
+        self.current_network.recurrent_model.save('./model/trainstep_{}/recurrent'.format(step))
+
+    def load_network_dir(self, step: int):
+        self.current_network.representation_network = tf.keras.models.load_model('./model/trainstep_{}/representation'.format(step))
+        self.current_network.value_network = tf.keras.models.load_model('./model/trainstep_{}/value'.format(step))
+        self.current_network.policy_network = tf.keras.models.load_model('./model/trainstep_{}/policy'.format(step))
+        self.current_network.dynamic_network = tf.keras.models.load_model('./model/trainstep_{}/dynamic'.format(step))
+        self.current_network.reward_network = tf.keras.models.load_model('./model/trainstep_{}/reward'.format(step))
+
+        self.current_network.initial_model = tf.keras.models.load_model('./model/trainstep_{}/initial'.format(step))
+        self.current_network.recurrent_model = tf.keras.models.load_model('./model/trainstep_{}/recurrent'.format(step))
+
+        self.save_network(step, self.current_network)   # 경우에 따라 step 수정 
