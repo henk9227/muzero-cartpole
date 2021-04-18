@@ -3,14 +3,17 @@ import gym
 
 from src.game.game import Action, AbstractGame
 from src.game.gym_wrappers import ScalingObservationWrapper
+from colabgtmrender.recorder import Recorder
 
 class CartPole(AbstractGame):
     """The Gym CartPole environment"""
 
-    def __init__(self, discount: float):
+    def __init__(self, discount: float, mode=None):
         super().__init__(discount)
         self.env = gym.make('CartPole-v1')
         self.env = ScalingObservationWrapper(self.env, low=[-2.4, -2.0, -0.42, -3.5], high=[2.4, 2.0, 0.42, 3.5])
+        if mode == 'record':
+            self.env = Recorder(self.env, './video')
         self.actions = list(map(lambda i: Action(i), range(self.env.action_space.n)))
         self.observations = [self.env.reset()]
         self.done = False
