@@ -3,7 +3,7 @@ import gym
 
 from src.game.game import Action, AbstractGame
 from src.game.gym_wrappers import ScalingObservationWrapper
-from colabgtmrender.recorder import Recorder
+from colabgymrender.recorder import Recorder
 
 class CartPole(AbstractGame):
     """The Gym CartPole environment"""
