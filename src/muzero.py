@@ -1,4 +1,4 @@
-from src.config import MuZeroConfig, make_cartpole_config
+from src.config import *
 from src.networks.shared_storage import SharedStorage
 from src.self_play.self_play import run_selfplay, run_eval
 from src.training.replay_buffer import ReplayBuffer
@@ -44,9 +44,9 @@ def muzero_load_train(config: MuZeroConfig, step: int):
     return storage.latest_network()
 
 
-def muzero_recording(config: MuZeroConfig):
+def muzero_recording(config: MuZeroConfig, step: int):
     storage = SharedStorage(config.new_network(), config.uniform_network(), config.new_optimizer())
-
+    storage.load_network_dir(step)
     print("Eval score:", run_eval(config, storage, 50))
 
     storage.save_network_dir(config.nb_training_loop)
