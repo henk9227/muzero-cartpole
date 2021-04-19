@@ -105,7 +105,7 @@ def make_cartpole_config() -> MuZeroConfig:
 
   return MuZeroConfig(
       game=CartPole,
-      nb_training_loop=50,
+      nb_training_loop=5,
       nb_episodes=20,
       nb_epochs=20,
       network_args={'action_size': 2,
@@ -117,8 +117,8 @@ def make_cartpole_config() -> MuZeroConfig:
       max_moves=1000,
       discount=0.99,
       dirichlet_alpha=0.25,
-      num_simulations=11,   # Odd number perform better in eval mode
-      batch_size=512,
+      num_simulations=7,
+      batch_size=32,
       td_steps=10,
       visit_softmax_temperature_fn=visit_softmax_temperature,
       lr=0.05, mode=None)
@@ -142,8 +142,8 @@ def make_cartpole_record_config() -> MuZeroConfig:
         max_moves=1000,
         discount=0.99,
         dirichlet_alpha=0.25,
-        num_simulations=11,  # Odd number perform better in eval mode
-        batch_size=512,
+        num_simulations=7,
+        batch_size=32,
         td_steps=10,
         visit_softmax_temperature_fn=visit_softmax_temperature,
         lr=0.05, mode='record')

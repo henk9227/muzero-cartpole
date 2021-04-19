@@ -56,8 +56,6 @@ class ActionHistory(object):
     def to_play(self) -> Player:
         return Player()
 
-# ==========================================================
-# elements in pseudocode.Game class
 
 class AbstractGame(ABC):
     """
