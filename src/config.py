@@ -28,9 +28,11 @@ class MuZeroConfig(object):
                td_steps: int,
                visit_softmax_temperature_fn,
                lr: float,
-               known_bounds: Optional[KnownBounds] = None):
+               known_bounds: Optional[KnownBounds] = None,
+               mode=None):
     ### Environment
     self.game = game
+    self.mode = mode
 
     ### Self-Play
     self.action_space_size = action_space_size
@@ -81,7 +83,7 @@ class MuZeroConfig(object):
 
   def new_game(self) -> AbstractGame:
     # return Game(self.action_space_size, self.discount)
-    return self.game(self.discount)
+    return self.game(self.discount, self.mode)
 
   def new_network(self) -> BaseNetwork:
       return self.network(**self.network_args)
@@ -119,7 +121,7 @@ def make_cartpole_config() -> MuZeroConfig:
       batch_size=512,
       td_steps=10,
       visit_softmax_temperature_fn=visit_softmax_temperature,
-      lr=0.05)
+      lr=0.05, mode=None)
 
 def make_cartpole_record_config() -> MuZeroConfig:
 
@@ -127,7 +129,7 @@ def make_cartpole_record_config() -> MuZeroConfig:
         return 1.0
 
     return MuZeroConfig(
-        game=CartPole(mode='record'),
+        game=CartPole,
         nb_training_loop=50,
         nb_episodes=20,
         nb_epochs=20,
@@ -144,4 +146,4 @@ def make_cartpole_record_config() -> MuZeroConfig:
         batch_size=512,
         td_steps=10,
         visit_softmax_temperature_fn=visit_softmax_temperature,
-        lr=0.05)
+        lr=0.05, mode='record')

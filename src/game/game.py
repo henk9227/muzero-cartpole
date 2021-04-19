@@ -65,12 +65,13 @@ class AbstractGame(ABC):
     One instance represent a single episode of interaction with the environment.
     """
 
-    def __init__(self, discount: float):
+    def __init__(self, discount: float, mode=None):
         self.history = []
         self.rewards = []
         self.child_visits = []
         self.root_values = []
         self.discount = discount
+        self.mode = mode
 
     def apply(self, action: Action):
         """Apply an action onto the environment."""
