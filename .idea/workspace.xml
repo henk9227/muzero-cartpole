@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10f7ede6-9d48-42e5-bb50-1ceafc8d475c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/muzero_cartpole.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/muzero_cartpole.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/cartpole.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/cartpole.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/muzero.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/muzero.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/networks/shared_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/networks/shared_storage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,33 +49,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="391" />
+          <entry key="py" value="396" />
+          <entry key="txt" value="108" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="391" />
+          <entry key="PLAIN_TEXT" value="108" />
+          <entry key="Python" value="396" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="py" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/muzero.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="705">
-              <caret line="47" column="99" selection-start-line="47" selection-start-column="99" selection-end-line="47" selection-end-column="99" />
+            <state relative-caret-position="210">
+              <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
               <folding>
                 <element signature="e#0#53#0" expanded="true" />
                 <marker date="1618764096657" expanded="true" signature="1924:1929" ph="..." />
@@ -116,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/cartpole.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            <state relative-caret-position="105">
+              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -125,10 +122,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/networks/shared_storage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/game/gym_wrappers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="300">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
@@ -140,7 +146,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
+            <state relative-caret-position="1403">
               <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
@@ -169,22 +175,22 @@
         <option value="$PROJECT_DIR$/src/game/game.py" />
         <option value="$PROJECT_DIR$/src/networks/network.py" />
         <option value="$PROJECT_DIR$/src/networks/cartpole_network.py" />
-        <option value="$PROJECT_DIR$/src/networks/shared_storage.py" />
         <option value="$PROJECT_DIR$/src/self_play/mcts.py" />
         <option value="$PROJECT_DIR$/src/self_play/self_play.py" />
         <option value="$PROJECT_DIR$/src/training/replay_buffer.py" />
         <option value="$PROJECT_DIR$/src/game/gym_wrappers.py" />
         <option value="$PROJECT_DIR$/src/training/training.py" />
-        <option value="$PROJECT_DIR$/src/game/cartpole.py" />
         <option value="$PROJECT_DIR$/src/config.py" />
         <option value="$PROJECT_DIR$/src/muzero.py" />
+        <option value="$PROJECT_DIR$/src/game/cartpole.py" />
+        <option value="$PROJECT_DIR$/src/networks/shared_storage.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-12" />
-    <option name="width" value="1986" />
-    <option name="height" value="2112" />
+    <option name="x" value="-11" />
+    <option name="width" value="1940" />
+    <option name="height" value="2111" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -208,6 +214,12 @@
               <item name="muzero_cartpole" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="game" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="muzero_cartpole" type="b2602c69:ProjectViewProjectNode" />
+              <item name="muzero_cartpole" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="networks" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="muzero_cartpole" type="b2602c69:ProjectViewProjectNode" />
@@ -332,14 +344,29 @@
       <option name="presentableId" value="Default" />
       <updated>1616589175823</updated>
     </task>
+    <task id="LOCAL-00001" summary="2104190142&#10;+ make_cartpole_record_config&#10;+ Cartpole(mode)">
+      <created>1618764171419</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618764171419</updated>
+    </task>
+    <task id="LOCAL-00002" summary="2104191105&#10;cartpole.py -&gt; colabgymrender">
+      <created>1618841133556</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618841133556</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1324" height="1408" extended-state="0" />
+    <frame x="-7" y="0" width="1293" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49843013" visible="true" weight="0.24009325" />
-      <window_info id="Structure" order="1" sideWeight="0.50156987" side_tool="true" visible="true" weight="0.24009325" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4982415" visible="true" weight="0.24601911" />
+      <window_info id="Structure" order="1" sideWeight="0.5017585" side_tool="true" visible="true" weight="0.24601911" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -348,17 +375,48 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3299293" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32967034" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32967034" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2104190142&#10;+ make_cartpole_record_config&#10;+ Cartpole(mode)" />
+    <MESSAGE value="2104191105&#10;cartpole.py -&gt; colabgymrender" />
+    <option name="LAST_COMMIT_MESSAGE" value="2104191105&#10;cartpole.py -&gt; colabgymrender" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/game/game.py">
@@ -392,13 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/networks/shared_storage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" lean-forward="true" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/training/replay_buffer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -425,12 +476,13 @@
     </entry>
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/python/keras/optimizers.py" />
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/tensorflow/_api/v1/keras/optimizers/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/src/game/gym_wrappers.py">
+    <entry file="file://$PROJECT_DIR$/src/muzero.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="210">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#53#0" expanded="true" />
+            <marker date="1618764096657" expanded="true" signature="1924:1929" ph="..." />
           </folding>
         </state>
       </provider>
@@ -441,16 +493,6 @@
           <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="e#66#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/cartpole.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="50" lean-forward="true" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -467,7 +509,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="849">
+        <state relative-caret-position="1403">
           <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
@@ -476,14 +518,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/muzero.py">
+    <entry file="file://$PROJECT_DIR$/src/game/gym_wrappers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="99" selection-start-line="47" selection-start-column="99" selection-end-line="47" selection-end-column="99" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="e#0#53#0" expanded="true" />
-            <marker date="1618764096657" expanded="true" signature="1924:1929" ph="..." />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/cartpole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/networks/shared_storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
