@@ -1,6 +1,6 @@
 import tensorflow as tf
 
-from src.networks.network import BaseNetwork, UniformNetwork, AbstractNetwork
+from src.networks.network import *
 
 
 class SharedStorage(object):
@@ -39,7 +39,12 @@ class SharedStorage(object):
         self.current_network.dynamic_network = tf.keras.models.load_model('./model/trainstep_{}/dynamic'.format(step))
         self.current_network.reward_network = tf.keras.models.load_model('./model/trainstep_{}/reward'.format(step))
 
-        self.current_network.initial_model = tf.keras.models.load_model('./model/trainstep_{}/initial'.format(step))
-        self.current_network.recurrent_model = tf.keras.models.load_model('./model/trainstep_{}/recurrent'.format(step))
+        self.current_network.initial_model = InitialModel(self.current_network.representation_network,
+                                                          self.current_network.value_network,
+                                                          self.current_network.policy_network)
+        self.current_network.recurrent_model = RecurrentModel(self.current_network.dynamic_network,
+                                                              self.current_network.reward_network,
+                                                              self.current_network.value_network,
+                                                              self.current_network.policy_network)
 
         self.save_network(step, self.current_network)   # 경우에 따라 step 수정 
