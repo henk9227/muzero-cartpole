@@ -15,10 +15,13 @@ def muzero(config: MuZeroConfig):
         train_network(config, storage, replay_buffer, config.nb_epochs)
 
         print("Train score:", score_train)
-        print("Eval score:", run_eval(config, storage, 50))
+        eval_score = run_eval(config, storage, 50)
+        print("Eval score:", eval_score)
         print(f"MuZero played {config.nb_episodes * (loop + 1)} "
               f"episodes and trained for {config.nb_epochs * (loop + 1)} epochs.\n")
-
+        if eval_score >= 100:
+            config.nb_training_loop = loop
+            break
     storage.save_network_dir(config.nb_training_loop)
 
     return storage.latest_network()
@@ -26,18 +29,18 @@ def muzero(config: MuZeroConfig):
 
 def muzero_load_train(config: MuZeroConfig, step: int):
     storage = SharedStorage(config.new_network(), config.uniform_network(), config.new_optimizer())
-    replay_buffer = ReplayBuffer(config)
+    # replay_buffer = ReplayBuffer(config)
     storage.load_network_dir(step)
-    
+
     for loop in range(config.nb_training_loop):
         print("Training loop", loop)
-        score_train = run_selfplay(config, storage, replay_buffer, config.nb_episodes)
-        train_network(config, storage, replay_buffer, config.nb_epochs)
+        # score_train = run_selfplay(config, storage, replay_buffer, config.nb_episodes)
+        # train_network(config, storage, replay_buffer, config.nb_epochs)
 
-        print("Train score:", score_train)
+        # print("Train score:", score_train)
         print("Eval score:", run_eval(config, storage, 50))
-        print(f"MuZero played {config.nb_episodes * (loop + 1)} "
-              f"episodes and trained for {config.nb_epochs * (loop + 1)} epochs.\n")
+        # print(f"MuZero played {config.nb_episodes * (loop + 1)} "
+        # f"episodes and trained for {config.nb_epochs * (loop + 1)} epochs.\n")
 
     # storage.save_network_dir(config.nb_training_loop + step)
 
@@ -48,5 +51,3 @@ def muzero_recording(config: MuZeroConfig, step: int):
     storage = SharedStorage(config.new_network(), config.uniform_network(), config.new_optimizer())
     storage.load_network_dir(step)
     print("Eval score:", run_eval(config, storage, 50))
-
-    storage.save_network_dir(config.nb_training_loop)

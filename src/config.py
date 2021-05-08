@@ -105,13 +105,13 @@ def make_cartpole_config() -> MuZeroConfig:
 
   return MuZeroConfig(
       game=CartPole,
-      nb_training_loop=5,
-      nb_episodes=20,
+      nb_training_loop=30,
+      nb_episodes=50,
       nb_epochs=20,
       network_args={'action_size': 2,
                     'state_size': 4,
                     'representation_size': 4,
-                    'max_value': 500},
+                    'max_value': 50},
       network=CartPoleNetwork,
       action_space_size=2,
       max_moves=1000,
@@ -130,13 +130,13 @@ def make_cartpole_record_config() -> MuZeroConfig:
 
     return MuZeroConfig(
         game=CartPole,
-        nb_training_loop=50,
-        nb_episodes=20,
+        nb_training_loop=10,
+        nb_episodes=50,
         nb_epochs=20,
         network_args={'action_size': 2,
                       'state_size': 4,
                       'representation_size': 4,
-                      'max_value': 500},
+                      'max_value': 50},
         network=CartPoleNetwork,
         action_space_size=2,
         max_moves=1000,
